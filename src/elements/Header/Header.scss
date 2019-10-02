@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+#Header{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    color:white;
+    color:$yellow;
+    display:flex;
+    align-items:center;
+    .part.menu{
+        flex:1;
+        text-align:right;
+        padding-right:15px;
+    }
+}
