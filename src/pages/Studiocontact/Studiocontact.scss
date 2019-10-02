@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+#Studiocontact{
+
+    .grid{
+    
+        min-height:100vh;
+        display:grid;
+        grid-template-areas:
+            'article article Denis Adrien'
+            'article article Romain Julien'
+            'Raph Frank Chris Emma'
+        ;
+
+        article{
+            background-color:white;
+            grid-area:article;
+        }
+        div{
+            border:1px dashed black;
+            background-color:silver;
+            img{
+                object-fit: cover;
+                width:100%;
+                height:100%;
+            }
+            &#Denis{
+                grid-area:Denis;
+            }
+            #Adrien{
+                grid-area:Adrien;
+            }
+            #Romain{
+                grid-area:Romain;
+            }
+            #Julien{
+                grid-area:Julien;
+            }
+            #Raph{
+                grid-area:Raph;
+            }
+            #Frank{
+                grid-area:Frank;
+            }
+            #Chris{
+                grid-area:Chris;
+            }
+            #Emma{
+                grid-area:Emma;
+            }
+        }
+    }
+}
