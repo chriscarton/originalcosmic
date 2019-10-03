@@ -6,14 +6,17 @@ import './App.scss';
 
 //Import des éléments (header, footer, etc...)
 import Header from './elements/Header/Header.js';
+import Footer from './elements/Footer/Footer.js';
 
 //Import des pages (c'est quand même le plus important)
 import Homepage from './pages/Homepage/Homepage.js';
 import Studiocontact from './pages/Studiocontact/Studiocontact.js';
 
-//Et enfin on va faire nos jolies petites routes.
+//On va faire nos jolies petites routes.
 import { BrowserRouter as Router, Switch, Route, Link, HashRouter } from 'react-router-dom';
 
+//On met du font awesome
+import './assets/font-awesome-4.7.0/css/font-awesome.min.css';
 
 function App() {
   return (
@@ -28,6 +31,7 @@ function App() {
             
           </Switch>
         </main>
+        <Footer/>
       </div>
     </Router>
   );
