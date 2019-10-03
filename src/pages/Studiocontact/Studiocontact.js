@@ -9,8 +9,10 @@ export class Studiocontact extends Component {
                 <div className="grid">
                     
                     <article>
-                        {StudioContent}
+                        <StudioContent/>
                     </article>
+
+
                     <div id="Denis">
                         <img src="/img/team/DENIS.jpg"/>
                     </div>
@@ -37,7 +39,7 @@ export class Studiocontact extends Component {
                     <div id="Emma">
                         <img src="/img/team/EMMA.jpg" />
                     </div>
-
+                    
                 </div>
             </div>
         )

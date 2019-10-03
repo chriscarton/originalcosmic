@@ -9,7 +9,9 @@ export class Header extends Component {
         return (
             <header id="Header">
                 <div className="part">
-                    <img src={yellogo} alt="Logo de notre super agence!"/>
+                    <Link to="/">
+                        <img src={yellogo} alt="Logo de notre super agence!"/>
+                    </Link>
                 </div>
                 <div className="part menu">
                     <Link className="arrow-link" to="/studio">Studio / Contact</Link>

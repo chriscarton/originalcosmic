@@ -4,25 +4,31 @@ export class Studio extends Component {
     render() {
         return (
             <div>
-                Original Cosmic est un studio de design graphique et d’animation basé à Lille.
-                C’est la convergence d’esprits libres, soucieux de fournir une production graphique travaillée, dépouillée, parfois
-                sensible et complexe mais toujours singulière.
-                
-                Nos champs d’activité :
-                – Identité visuelle (Print et multimédia) : définition de l’image de marque, design de logos, signalétique, catalogues,
-                pochettes de disque, développement de site internet.
-                – Vidéo et animation : réalisation de clip, vidéo promotionnelle, animation 3D, motion design.
-                – Photographie : base visuelle de bon nombre de projets, nous produisons les supports photographiques nécessaires.
-                Shooting, packshot produit,etc.
-                – Illustration
-                ———–
-                Directeur de création : Frank Essam
-                Directeur artistique / Designer graphique : Raphaël Kucharski
-                Développeurs / Intégrateurs web : Chris Carton & Julien Leclercq
-                Animateurs 2D-3D / Illustrateurs : Romain Marchetti, Denis Fleurion, Adrien Lannoy, Julien Adoum
-                ———–
-                contact@originalcosmic.fr
-                +33 (0) 6 18 78 43 78
+                <p>
+                Original Cosmic est un studio de design graphique et d’animation basé à Lille.<br/>
+                C’est la convergence d’esprits libres, soucieux de fournir une production graphique travaillée, dépouillée, parfois sensible et complexe mais toujours singulière.
+                </p>
+
+                <p>
+                    <b>Nos champs d’activité :</b><br/>
+                    – Identité visuelle (Print et multimédia) : définition de l’image de marque, design de logos, signalétique, catalogues, pochettes de disque, développement de site internet.<br/>
+                    – Vidéo et animation : réalisation de clip, vidéo promotionnelle, animation 3D, motion design.<br/>
+                    – Photographie : base visuelle de bon nombre de projets, nous produisons les supports photographiques nécessaires.<br/>
+                    Shooting, packshot produit,etc.<br/>
+                    – Illustration
+                </p>
+                <hr/>
+                <p>
+                    <b>Directeur de création :</b> Frank Essam<br/>
+                    <b>Directeur artistique / Designer graphique :</b> Raphaël Kucharski<br/>
+                    <b>Développeurs / Intégrateurs web :</b> Chris Carton & Julien Leclercq<br/>
+                    <b>Animateurs 2D-3D / Illustrateurs :</b> Romain Marchetti, Denis Fleurion, Adrien Lannoy, Julien Adoum<br/>
+                </p>
+                <hr />
+                <p>
+                    contact@originalcosmic.fr<br/>
+                    +33 (0) 6 18 78 43 78<br/>
+                </p>
             </div>
         )
     }
