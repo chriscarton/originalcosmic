@@ -19,7 +19,9 @@ export class Projects extends Component {
                 <div className="items">
                     {this.state.projects.map((item)=>(
                         <div className={`item item-${item.id}`} key={item.id}>
-                            <img src={`/img/projects/${item.img}`} alt="{item.img}"/>
+                            <Link to={`projet/${item.id}`}>
+                                <img src={`/img/projects/${item.img}`} alt="{item.img}"/>
+                            </Link>
                         </div>
                     ))}
                 </div>

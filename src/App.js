@@ -12,6 +12,8 @@ import Studiocontact from './pages/Studiocontact/Studiocontact.js';
 
 //Import du composant allProjects (qui n'est pas vraiment une page...)
 import AllProjects from './components/AllProjects/AllProjects.js';
+import SingleProject from './components/SingleProject/SingleProject.js';
+
 
 //On va faire nos jolies petites routes.
 import { BrowserRouter as Router, Switch, Route, Link, HashRouter } from 'react-router-dom';
@@ -29,8 +31,7 @@ function App() {
             <Route path="/" exact component={Homepage} />
             <Route path="/studio" exact component={Studiocontact} />
             <Route path="/projets" exact component={AllProjects} />
-
-            
+            <Route path="/projet/:id" exact component={SingleProject} />
           </Switch>
         </main>
         <Footer/>
