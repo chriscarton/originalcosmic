@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Projects.scss';
 import data from './data.js';
+import { Link } from 'react-router-dom';
+import AllProjects from '../AllProjects/AllProjects.js';
 
 export class Projects extends Component {
 
@@ -21,8 +23,10 @@ export class Projects extends Component {
                         </div>
                     ))}
                 </div>
-                <div>
-                    Tous nos projets (lien)
+                <div className="all-projects">
+                    <Link to="/projets">
+                        Tous nos projets
+                    </Link>
                 </div>
             </div>
         )

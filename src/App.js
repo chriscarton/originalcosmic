@@ -2,8 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
-
-
 //Import des éléments (header, footer, etc...)
 import Header from './elements/Header/Header.js';
 import Footer from './elements/Footer/Footer.js';
@@ -11,6 +9,9 @@ import Footer from './elements/Footer/Footer.js';
 //Import des pages (c'est quand même le plus important)
 import Homepage from './pages/Homepage/Homepage.js';
 import Studiocontact from './pages/Studiocontact/Studiocontact.js';
+
+//Import du composant allProjects (qui n'est pas vraiment une page...)
+import AllProjects from './components/AllProjects/AllProjects.js';
 
 //On va faire nos jolies petites routes.
 import { BrowserRouter as Router, Switch, Route, Link, HashRouter } from 'react-router-dom';
@@ -27,6 +28,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Homepage} />
             <Route path="/studio" exact component={Studiocontact} />
+            <Route path="/projets" exact component={AllProjects} />
 
             
           </Switch>
