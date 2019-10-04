@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 #singleProject{
     .cover{
-        border:1px dashed black;
+        //border:1px dashed black;
         position:relative;
         h1.title{
             position:absolute;
@@ -20,8 +20,38 @@
     }
     .medias{
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        border:1px dashed green;
+        min-height:100vh;
+        &.medias-1{
+            //grid-column-gap:25px;
+            grid-template-columns: 2fr 6fr 2fr;
+            grid-template-areas:
+            'cartou media0 previo'
+            'cartou media0 blank'
+            'cartou media0 nextio'
+            ;
+            .media img{
+                object-fit: contain;
+            }
+        }
+        &.medias-2{
+            border:5px dashed gray;
+            grid-template-areas:
+                'media0 media0 cartou'
+                'media0 media0 cartou'
+                'media1 yellow yellow'
+                'media1 yellow yellow'
+                'media1 previo nextio'
+
+        }
+        &.medias-6{
+            grid-template-areas: 
+                'media0 media0 media0'
+                'previo media1 media2'
+                'media3 cartou cartou'
+                'media4 media5 nextio'
+            ;
+        }
         .cartouche{
             background-color:white;
             grid-column:1/3; 
@@ -30,13 +60,33 @@
             display:flex;
             align-items: center;
             justify-content: center;
+            grid-area:cartou;
         }
-        .media{
-            img{
-                display:block;
-                max-width: 100%;
-                height:auto;
-            }
+
+        .media img{
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            display:block;
+        }
+        
+        .nav-prev{
+            grid-area:previo;
+        }
+        .nav-next{
+            grid-area:nextio;
+        }
+        .blank{
+            grid-area:blank;
+            background-color:white;
+        }
+        .black{
+            grid-area:black;
+            background-color:black;
+        }
+        .yellow{
+            grid-area:yellow;
+            background-color:$yellow;
         }
         
     }

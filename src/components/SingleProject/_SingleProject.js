@@ -50,6 +50,24 @@ export class SingleProject extends Component {
 
         return (
             <div id="singleProject">
+
+                <div className="cover">
+
+                    <h1 className="title">{item.name}</h1>
+                    <img src={item.cover} alt=""/>
+                    
+                    {!item.medias.length &&
+                        <div>
+
+                            {this.cartouche()}
+                            <ProjectNav direction="prev" arrow="left" link={`/projet/${item.id - 1}`} text="Projet précédent" />
+
+                            <ProjectNav direction="next" arrow="right" link={`/projet/${item.id + 1}`} text="Projet suivant" />
+                        </div>
+                    }
+                    
+                </div>
+                                    
                 {item.medias.length > 0 &&
                     <div className={`medias medias-${item.medias.length}`}>
                         {this.cartouche()}
@@ -68,8 +86,6 @@ export class SingleProject extends Component {
                         <ProjectNav direction="next" arrow="right" link={`/projet/${item.id + 1}`} text="Projet suivant"/>
 
                         <div className="blank"></div>
-                        <div className="black"></div>
-                        <div className="yellow"></div>
                     </div>
                 }
 
