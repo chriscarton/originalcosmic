@@ -159,7 +159,129 @@ let data = [
             }
             //there is none...
         ]
+    },
+
+
+    //Voilà on a tout
+    //Maintenant il faut mettre les images
+    {
+        id:11,
+        name:"Ombres Colorées",
+        img:"011_WAKASQUAREOC-768x768.jpg",
+        content:"Ombres Colorées<hr>Client: Wawa L’AssoMission: Print / MultimédiaPhoto: Matt DohenyModel: Will B.Bell",
+        slug:"ombres-colorees",
+        medias:[
+            {
+                type:"image",
+                src:"http://originalcosmic.fr/wp-content/uploads/2019/05/WAKAMOCKPOSTOC-1440x1440.jpg"
+            }
+        ]
+    },
+    {
+        id:12,
+        name:'Maescroc',
+        img:"012_1-900x895.png",
+        content:"MAESCROC « NordikZoo »<hr><br>Pochette de disque<br>Poster<br>Design graphique<br>2016",
+        slug:'maescroc',
+        medias:[
+            {
+                type:"image",
+                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/9e290317527117.56647b81cf2d0-960x960.jpg"
+            },
+            {
+                type: "image",
+                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/f0238c17527117.5664a1a5ad5a0-1-433x866.jpg"
+            }
+        ]
+    },
+    {
+        id:13,
+        name:"OMG",
+        img:"013_OMG-3eme-decor-150x150.gif",
+        content: "OMG<br>En développement<br>Film court d’animation",
+        slug:'omg',
+        medias: [
+            {
+                type:"video",
+                src:"https://www.youtube.com/watch?v=i0NQXLxOXEo&feature=youtu.be"
+            }
+        ]
+    },
+    {
+        id:14,
+        name:"Doux divorce records",
+        img:"014_DDRLOGFACE-768x768.jpg",
+        content:"DOUX DIVORCE RECORDS<br>Label de musique<hr>Identité visuelle<br>Design graphique<br>2017",
+        slug:"doux-divorce-records",
+        medias: [
+            {
+                type:"image",
+                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/13925472_1153557848000435_706687528803582981_o-960x960.png"
+            },
+            {
+                type: "image",
+                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/13909005_574832796029717_191003813203858820_o-480x480.jpg"
+            },
+            {
+                type: "image",
+                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/11021112_878714695484753_6208556186257630867_n-480x480.jpg"
+            }
+        ]
+    },
+    {
+        id:15,
+        name:"Ronan Martin",
+        img:"015_capalone-698x286.png",
+        content:"RONAN MARTIN « À l’intérieur »<hr>Pochette de disque<br>Design graphique<br>2017<br>",
+        slug:"ronan-martin",
+        medias: [
+            {
+                type: "image",
+                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/ronaninter3-1920x960.jpg"
+            },
+            {
+                type:"image",
+                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/rmdosvinl-960x960.jpg"
+            }
+            
+        ]
+    },
+    {
+        id:16,
+        name: "Ronan Martin « Les rayons »",
+        img: "016_2-900x895.png",
+        content: "RONAN MARTIN « Les rayons »<hr>Pochette de disque<br>Clip musical<br>Direction artistique<br>Réalisation vidéo<br>Design graphique<br>2015",
+        slug: "ronan-martin-les-rayons",
+        medias: [
+            {
+                type: "image",
+                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/ronanrayonsvin-1440x960.jpg"
+            },
+            {
+                type: "video",
+                src: "https://www.youtube.com/watch?v=sES64_1VmVU"
+            },
+            {
+                type: "image",
+                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/1907526_913693705320185_9131023012842273479_n-480x480.png"
+            }
+        ]
+    },
+    {
+        id:17,
+        name: "Salvak « Vendetta »",
+        img: "017_cycle-01-150x150.gif",
+        content: "SALVAK « Vendetta »<hr>Clip musical<br>Animation 2d<br>2017",
+        slug: "vendetta",
+        medias: [
+            {
+                type: "video",
+                src: "https://www.youtube.com/watch?v=Mg_s40GsIbo"
+            }
+        ]
     }
+
+
 ];
 export default data;
 

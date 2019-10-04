@@ -5,11 +5,13 @@
     min-height:100vh;
     .items{
         grid-template-areas: 
-            'item1 item1 item2 item2' 
-            'item3 item3 item4 item5'
-            'item3 item3 item6 item7'
-            'item3 item3 item8 item8'
-            'item9 item9 item10 item10'
+            'item1  item1  item2  item2' 
+            'item3  item3  item4  item5'
+            'item3  item3  item6  item7'
+            'item3  item3  item8  item8'
+            'item9  item9  item10 item10'
+            'item11 item12 item13 item14'
+            'item15 item15 . .'
         ;
         display:grid;
 
@@ -45,6 +47,24 @@
             &.item-10{
                 grid-area:item10;
             }
+
+            &.item-11{
+                grid-area:item11;
+            }
+            &.item-12{
+                grid-area:item12;
+            }
+            &.item-13{
+                grid-area:item13;
+            }
+            &.item-14{
+                grid-area:item14;
+            }
+
+            &.item-15{
+                grid-area:item15;
+            }
+
             //border:1px dashed black;
 
             img{
