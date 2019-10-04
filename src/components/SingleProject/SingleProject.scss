@@ -35,14 +35,23 @@
             }
         }
         &.medias-2{
-            border:5px dashed gray;
+            
             grid-template-areas:
                 'media0 media0 cartou'
                 'media0 media0 cartou'
                 'media1 yellow yellow'
                 'media1 yellow yellow'
                 'media1 previo nextio'
-
+            ;
+        }
+        &.medias-3{
+            grid-template-areas:
+                'media0 media0 cartou'
+                'media0 media0 cartou'
+                'media1 media2 media2'
+                'media1 previo nextio'
+                
+            ;
         }
         &.medias-6{
             grid-template-areas: 

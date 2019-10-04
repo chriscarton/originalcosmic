@@ -58,18 +58,31 @@ export class SingleProject extends Component {
                                 className={`media media-${index}`}
                                 style={{ gridArea: `media${index}`}}
                                 >
-                                <img src={media} alt="" />
+                                {media.type === 'image' && 
+                                    <img src={media.src} alt="" />
+                                }
+                                {media.type === 'video' &&
+                                    <div className="video">
+                                        {media.src}
+                                    </div>
+                                }
+                                {media.type === 'playlist' &&
+                                    <div className="playlist">
+                                        {parse(media.src)}
+                                    </div>
+                                }
                             </div>
                         ))}
                         {/* La solution des id -1 et + 1 c'est pas top */}
+                        {/* Et en plus ça ne fonctionne pas... */}
 
                         <ProjectNav direction="prev" arrow="left" link={`/projet/${item.id - 1}`} text="Projet précédent" />
 
                         <ProjectNav direction="next" arrow="right" link={`/projet/${item.id + 1}`} text="Projet suivant"/>
 
-                        <div className="blank"></div>
-                        <div className="black"></div>
-                        <div className="yellow"></div>
+                        <div className="blank">{/* Just an empty color placeholder for grid layout */}</div>
+                        <div className="black">{/* Just an empty color placeholder for grid layout */}</div>
+                        <div className="yellow">{/* Just an empty color placeholder for grid layout */}</div>
                     </div>
                 }
 
