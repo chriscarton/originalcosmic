@@ -6,6 +6,9 @@ import './App.scss';
 import Header from './elements/Header/Header.js';
 import Footer from './elements/Footer/Footer.js';
 
+//Import du composant pour les Tests divers
+import Tests from './components/Tests/Tests.js';
+
 //Import des pages (c'est quand même le plus important)
 import Homepage from './pages/Homepage/Homepage.js';
 import Studiocontact from './pages/Studiocontact/Studiocontact.js';
@@ -32,6 +35,9 @@ function App() {
             <Route path="/studio" exact component={Studiocontact} />
             <Route path="/projets" exact component={AllProjects} />
             <Route path="/projet/:id" exact component={SingleProject} />
+
+            <Route path="/tests" exact component={Tests} />
+
           </Switch>
         </main>
         <Footer/>

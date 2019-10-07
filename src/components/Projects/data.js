@@ -3,7 +3,7 @@ let data = [
         id:1,
         name:"Voici mon premier projet",
         img:"001_ALEXLEFOUTST1-960x1440.jpg",
-        slug:"",
+        slug:"alex-le-fou",
         medias:[
             ""
         ]
@@ -12,7 +12,7 @@ let data = [
         id: 2,
         name: "Voici mon second projet",
         img:"002_amandaIS-960x1440.jpg",
-        slug:"",
+        slug:"amanda-is",
         medias:[
             ""
         ]
