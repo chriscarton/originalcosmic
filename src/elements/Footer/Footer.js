@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import './Footer.scss';
 
@@ -9,11 +9,11 @@ export class Footer extends Component {
             <footer id="Footer">
                 <div className="content">
                     <nav id="Socials">
-                        <a target="_blank" href="https://www.facebook.com/OriginalCosmic">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/OriginalCosmic">
+                            <i className="fa fa-facebook" aria-hidden="true"></i>
                         </a>
-                        <a target="_blank" href="https://www.instagram.com/original_cosmic_studio/">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/original_cosmic_studio/">
+                            <i className="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                         
                     </nav>

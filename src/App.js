@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.scss';
 
 //Import des éléments (header, footer, etc...)
@@ -19,7 +19,8 @@ import SingleProject from './components/SingleProject/SingleProject.js';
 
 
 //On va faire nos jolies petites routes.
-import { BrowserRouter as Router, Switch, Route, Link, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+//Link, HashRouter...
 
 //On met du font awesome
 import './assets/font-awesome-4.7.0/css/font-awesome.min.css';
@@ -34,7 +35,13 @@ function App() {
             <Route path="/" exact component={Homepage} />
             <Route path="/studio" exact component={Studiocontact} />
             <Route path="/projets" exact component={AllProjects} />
-            <Route path="/projet/:id" exact component={SingleProject} />
+            <Route path="/projet/:slug" exact component={SingleProject} />
+
+            {/* 
+            <Route path='/projet/:slug' component={(props) => (
+              <SingleProject timestamp={new Date().toString()} {...props} />
+            )} />
+            */}
 
             <Route path="/tests" exact component={Tests} />
 

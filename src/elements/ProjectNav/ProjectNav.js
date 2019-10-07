@@ -12,7 +12,13 @@ export class ProjectNav extends Component {
     render() {
         
         return (
-            <Link to={this.props.link} className={`nav nav-${this.props.direction}`}>
+            <Link 
+                to={{
+                    pathname:this.props.link,
+                    state:'flushDeal'
+                }}
+                className={`nav nav-${this.props.direction}`}
+            >
                 <i className={`fa fa-arrow-${this.props.arrow}`}></i>
                 &nbsp;{this.props.text}
             </Link>

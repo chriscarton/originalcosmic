@@ -14,30 +14,30 @@ export class Studiocontact extends Component {
 
 
                     <div id="Denis">
-                        <img src="/img/team/DENIS.jpg"/>
+                        <img alt="" src="/img/team/DENIS.jpg"/>
                     </div>
                     <div id="Adrien">
-                        <img src="/img/team/ADRIEN.jpg" />
+                        <img alt="" src="/img/team/ADRIEN.jpg" />
                     </div>
                     
                     <div id="Romain">
-                        <img src="/img/team/ROMAIN.jpg" />
+                        <img alt="" src="/img/team/ROMAIN.jpg" />
                     </div>
                     <div id="Julien">
-                        <img src="/img/team/JULIEN.jpg" />
+                        <img alt="" src="/img/team/JULIEN.jpg" />
                     </div>
                     
                     <div id="Raph">
-                        <img src="/img/team/RAPH.jpg" />
+                        <img alt="" src="/img/team/RAPH.jpg" />
                     </div>
                     <div id="Frank">
-                        <img src="/img/team/FRANK.jpg" />
+                        <img alt="" src="/img/team/FRANK.jpg" />
                     </div>
                     <div id="Chris">
-                        <img src="/img/team/CHRIS.jpg" />
+                        <img alt="" src="/img/team/CHRIS.jpg" />
                     </div>
                     <div id="Emma">
-                        <img src="/img/team/EMMA.jpg" />
+                        <img alt="" src="/img/team/EMMA.jpg" />
                     </div>
                     
                 </div>
