@@ -1,0 +1,28 @@
+.le-deserteur{
+    
+        display:grid;
+        //grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+}
+
+
+.ronan-martin{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        'cover   cover  .     '
+        'media1  media1 .     '
+        'cartou  cartou previo'
+        'media2  media2 nextio'
+    ;
+    background-color:beige;
+    .media-0{
+        grid-area:cover;
+    }
+    .media-1{
+        grid-area:media1;
+    }
+    .media-2{
+        grid-area:media2;
+    }
+}

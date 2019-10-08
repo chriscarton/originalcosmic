@@ -1,16 +1,8 @@
 import React, { Component } from 'react'
 import data from '../Projects/data.js';
-//import { Link } from 'react-router-dom';
 import './SingleProject.scss';
-//import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 import parse from 'html-react-parser';
 import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
-import { Link } from 'react-router-dom';
-
-//Bon ça il faut voir... 
-//https://www.npmjs.com/package/react-hashchange
-//Pour faire fonctionne le retour
-//import HashChange from "react-hashchange";
 
 export class SingleProject extends Component {
     constructor(props) {
@@ -82,26 +74,7 @@ export class SingleProject extends Component {
             </div>
         );
     }
-    /*
-    handleNext(paramSlug){
-        //let paramSlug = this.props.match.params.slug;
-
-        console.log(paramSlug);
-
-       
-        let results = data.filter(function (data) {
-            if (data.slug === paramSlug) {
-                return data;
-            }
-        });
-        let match = results[0];
-        
-        this.setState({
-            match:match
-        });
-        
-    }
-    */
+    
 
     shouldComponentUpdate() { 
         return true; 
@@ -121,13 +94,12 @@ export class SingleProject extends Component {
         return (
             <div id="singleProject">
                 {match.medias.length > 0 &&
-                    <div className={`medias medias-${match.medias.length}`}>
+                    <div className={`grid ${match.slug}`}>
                         {this.cartouche()}
                         {match.medias.map((media, index) => (
                             <div
                                 key={index}
-                                className={`media media-${index}`}
-                                style={{ gridArea: `media${index}` }}
+                                className={`media media${index}`}
                             >
                                 {media.type === 'image' &&
                                     <img src={media.src} alt="" />

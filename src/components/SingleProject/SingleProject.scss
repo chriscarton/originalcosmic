@@ -1,75 +1,21 @@
 @import '../../variables.scss';
+
+
 #singleProject{
-    .cover{
-        //border:1px dashed black;
-        position:relative;
-        h1.title{
-            position:absolute;
-            bottom:25px;
-            left:35px;
-            color:white;
-            font-style: italic;
-        }
-        img{
-            object-fit:cover;
-            object-position:center center;
-            width:100%;
-            height:auto;
-            display:block;
-        }
-    }
-    .medias{
-        display:grid;
-        border:1px dashed green;
+    
+    
+    
+
+    .grid{
         min-height:100vh;
-        &.medias-1{
-            //grid-column-gap:25px;
-            grid-template-columns: 2fr 6fr 2fr;
-            grid-template-areas:
-            'cartou media0 previo'
-            'cartou media0 blank'
-            'cartou media0 nextio'
-            ;
-            .media img{
-                object-fit: contain;
-            }
-        }
-        &.medias-2{
-            
-            grid-template-areas:
-                'media0 media0 cartou'
-                'media0 media0 cartou'
-                'media1 yellow yellow'
-                'media1 yellow yellow'
-                'media1 previo nextio'
-            ;
-        }
-        &.medias-3{
-            grid-template-areas:
-                'media0 media0 cartou'
-                'media0 media0 cartou'
-                'media1 media2 media2'
-                'media1 previo nextio'
-                
-            ;
-        }
-        &.medias-6{
-            grid-template-areas: 
-                'media0 media0 media0'
-                'previo media1 media2'
-                'media3 cartou cartou'
-                'media4 media5 nextio'
-            ;
-        }
+        
         .cartouche{
             background-color:white;
-            grid-column:1/3; 
             padding-left:50px;
             padding-right:50px;
             display:flex;
             align-items: center;
             justify-content: center;
-            grid-area:cartou;
         }
 
         .media img{
@@ -77,26 +23,33 @@
             width:100%;
             height:100%;
             display:block;
+            max-width: 100%;
+            min-height:320px;
+            min-width:320px;
         }
         
         .nav-prev{
-            grid-area:previo;
+            min-height:320px;
+            min-width:320px;
         }
         .nav-next{
-            grid-area:nextio;
+            min-width:320px;
+            min-height:320px;
         }
         .blank{
-            grid-area:blank;
             background-color:white;
+            display:none;
         }
         .black{
-            grid-area:black;
             background-color:black;
+            display:none;
         }
         .yellow{
-            grid-area:yellow;
             background-color:$yellow;
+            display:none;
         }
         
     }
+
+    @import 'grids.scss';
 }
