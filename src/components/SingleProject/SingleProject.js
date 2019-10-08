@@ -110,6 +110,9 @@ export class SingleProject extends Component {
                             <div
                                 key={index}
                                 className={`media media${index}`}
+                                style={{
+                                    animationDelay:index*0.75+'s'
+                                }}
                             >
                                 {media.type === 'image' &&
                                     <img src={media.src} alt="" />
@@ -121,6 +124,11 @@ export class SingleProject extends Component {
                                 }
                                 {media.type === 'playlist' &&
                                     <div className="playlist">
+                                        {parse(media.src)}
+                                    </div>
+                                }
+                                {media.type === 'iframe' &&
+                                    <div className="iframe">
                                         {parse(media.src)}
                                     </div>
                                 }

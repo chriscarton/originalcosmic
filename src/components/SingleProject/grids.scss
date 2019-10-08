@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 /*
 Redisposer ces éléments au cas par cas
     grid
@@ -10,55 +12,132 @@ Redisposer ces éléments au cas par cas
     yellow
 */
 
+//Le problème c'est que là tout est très encombré...
 
-.alex-le-fou{
+@media screen and (min-width:600px){
 
-}
-.amanda-is{
+    .alex-le-fou{
+        //960
+    }
+    .amanda-is{
 
-}
-.le-deserteur{
+    }
 
-}
-.afrika-glam{
+    //Il y a comme un overflow...
+    .le-deserteur{
+        //background-color:#EEC760;
+        
+        grid-template-areas:
+            'media0 media0 media0 media0'
+            'cartou cartou media1 media2'
+            'cartou cartou media3 media4'
+            '.      media5 previo nextio'
+        ;
 
-}
-.original-cosmic-playlist{
+        
 
-}
-.paleo{
+    }
+    .afrika-glam{
+        background-color:#BC3633;
+        
+        grid-template-areas: 
+            'media0 media0 media0 media0'
+            'cartou cartou previo nextio'
+        ;
+        .media img{
+            object-fit: contain;
+        }
+        
+        .media0{
+            background-color:#7E1D18;
+        
+        }
+        
+    }
+    .original-cosmic-playlist{
+        grid-template-areas: 
+            'media0 media1 media1 media1 media1 media1'
+            'media0 media1 media1 media1 media1 media1'
+            'cartou cartou cartou cartou previo nextio'
+        ;
+       
+        .media1{
+            background-color:$yellow;
+            padding:25px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .paleo{
+        //Intégrer la vidéo et faire la mise en page...
+    }
+    .the-mice{
+        grid-template-areas:
+            'media0 media0 media0 media0 media0'
+            'media1 media1 cartou media2 media2'
+            'media1 media1 cartou previo nextio'
+        ;
 
-}
-.the-mice{
+        .media0{
+            grid-area:media0;
+        }
 
-}
-.yellow-and-blue{
+        .media1{
+            grid-area:media1;
+        }
 
-}
-.akina-wise{
+        .media2{
+            background-color: #97AA73;
+            padding:25px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-}
-.eldorado-afro{
+        .media2{
+            grid-area:media2;
+        }
+    }
+    .yellow-and-blue{
+        background-color:#132990;
+        grid-template-areas: 
+            'cartou media0 media0'
+            'cartou media0 media0'
+            'cartou previo nextio'
+        ;
+    }
+    .akina-wise{
+            
+        grid-template-areas: 
+            'media0 media0 media0'
+            'cartou media0 media0'
+            '.      cartou previo'
+        ;
+    }
+    .eldorado-afro{
 
-}
-.ombres-colorees{
+    }
+    .ombres-colorees{
 
-}
-.maescroc{
+    }
+    .maescroc{
 
-}
-.omg{
+    }
+    .omg{
 
-}
-.doux-divorce-records{
+    }
+    .doux-divorce-records{
 
-}
-.ronan-martin{
+    }
+    .ronan-martin{
 
-}
-.ronan-martin-les-rayons{
+    }
+    .ronan-martin-les-rayons{
 
-}
-.vendetta{
+    }
+    .vendetta{
+
+    }
 
 }

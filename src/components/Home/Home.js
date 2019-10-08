@@ -37,14 +37,14 @@ export class Home extends Component {
                         ocSkills.play();
 
                         ocSkills.onended = function () {
-                            //alert("The video has ended");
+                            
                             Video.style.display = 'none';
                             Intro.style.display = 'block';
 
                             setTimeout(function () {
                                 Intro.classList.remove('to-out');
                             },1000);
-                            //C'est là que ça se passe
+                            
                         };
 
                     }, 3500);

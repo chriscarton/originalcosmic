@@ -87,8 +87,8 @@ let data = [
         slug:"paleo",
         medias:[
             {
-                type:"video",
-                src:"https://www.youtube.com/watch?v=WEjdhLse2Sg&feature=youtu.be"
+                type:"iframe",
+                src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WEjdhLse2Sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
             //Mettre la video?
         ]
@@ -109,8 +109,8 @@ let data = [
                 src:"http://originalcosmic.fr/wp-content/uploads/2019/02/micecover2-960x960.jpg"
             },
             {
-                type:"video",
-                src:"https://www.youtube.com/watch?v=F0uWuyqAFoY"
+                type:"iframe",
+                src:'<iframe width="560" height="315" src="https://www.youtube.com/embed/F0uWuyqAFoY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
         ]
     },
