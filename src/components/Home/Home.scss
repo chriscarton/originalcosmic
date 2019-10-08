@@ -5,8 +5,36 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color:$black;
-    h1.title{
-        color:$yellow;
+    background-color:$yellow;
+    animation-name:yellowToBlack;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    animation-delay:0.5s;
+    @keyframes yellowToBlack{
+        from{
+            background-color:$yellow;
+        }
+        to{
+            background-color:$black;
+        }
+    }
+    #Intro{
+        #typedStrings{
+            display:none;
+        }
+        .title{
+            font-size:3rem;
+            font-weight: bold;
+            color:$yellow;
+        }
+        transition:all 2s ease-out;
+        &.to-out{
+            transform:translateY(-200px);
+            opacity:0;
+        }
+    }
+    #Video{
+        display:none;
+        color:white;
     }
 }

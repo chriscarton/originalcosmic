@@ -3,11 +3,10 @@
 
 #singleProject{
     
-    
-    
-
     .grid{
         min-height:100vh;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         
         .cartouche{
             background-color:white;

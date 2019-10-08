@@ -3,19 +3,17 @@ let data = [
         id:1,
         name:"Voici mon premier projet",
         img:"001_ALEXLEFOUTST1-960x1440.jpg",
+        content:null,
         slug:"alex-le-fou",
-        medias:[
-            ""
-        ]
+        medias:[]
     },
     {
         id: 2,
         name: "Voici mon second projet",
         img:"002_amandaIS-960x1440.jpg",
+        content:null,
         slug:"amanda-is",
-        medias:[
-            ""
-        ]
+        medias:[]
     },
     {
         id: 3,

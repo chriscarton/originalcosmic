@@ -4,6 +4,25 @@ import React, { Component } from 'react';
 import './Footer.scss';
 
 export class Footer extends Component {
+
+    constructor(props){
+        super(props);
+
+
+        /*
+        
+        //Si on fait un lien de retour
+        window.scroll({
+            top: y,
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        //Faire partir la fusée 
+        //Et après faire le scroll...
+        */
+    }
+
     render() {
         return (
             <footer id="Footer">

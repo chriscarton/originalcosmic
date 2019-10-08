@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.scss';
 
@@ -25,32 +25,31 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //On met du font awesome
 import './assets/font-awesome-4.7.0/css/font-awesome.min.css';
 
-function App() {
-  return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <div className="App">
-        <Header/>
-        <main id="mainContent">
-          <Switch>
-            <Route path="/" exact component={Homepage} />
-            <Route path="/studio" exact component={Studiocontact} />
-            <Route path="/projets" exact component={AllProjects} />
-            <Route path="/projet/:slug" exact component={SingleProject} />
+export class App extends Component {
 
-            {/* 
-            <Route path='/projet/:slug' component={(props) => (
-              <SingleProject timestamp={new Date().toString()} {...props} />
-            )} />
-            */}
 
-            <Route path="/tests" exact component={Tests} />
+  render(){
+    return (
+      <Router basename={process.env.PUBLIC_URL}>
+        <div className="App">
+          <Header/>
+          <main id="mainContent">
+            <Switch>
+              <Route path="/" exact component={Homepage}/>
+              <Route path="/studio" exact component={Studiocontact} />
+              <Route path="/projets" exact component={AllProjects} />
+              <Route path="/projet/:slug" exact component={SingleProject} />
 
-          </Switch>
-        </main>
-        <Footer/>
-      </div>
-    </Router>
-  );
+              <Route path="/tests" exact component={Tests} />
+
+            </Switch>
+          </main>
+          <Footer/>
+        </div>
+      </Router>
+    );
+  }
+
 }
 
 export default App;

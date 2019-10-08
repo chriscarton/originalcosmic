@@ -10,6 +10,15 @@
     display:flex;
     align-items:center;
     z-index:20;
+
+    &.small-header{
+        position: static;
+        background-color:black;
+        img{
+            max-width: 100px;
+        }
+    }
+
     img{
         filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.25));
     }

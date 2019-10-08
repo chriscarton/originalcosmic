@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 import yellogo from '../../assets/img/yellogo.png';
 
 export class Header extends Component {
+    
     render() {
         return (
             <header id="Header">

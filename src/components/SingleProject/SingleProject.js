@@ -21,7 +21,6 @@ export class SingleProject extends Component {
             }
         });
         let match = results[0];
-        
         this.state = {
             match: match,
             isNew: false
@@ -34,7 +33,14 @@ export class SingleProject extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
         //alert('didMount');
+
+        this.smallHeader();
         
+    }
+
+    smallHeader(){
+        let header = document.querySelector('#Header');
+        header.classList.add('small-header')
     }
 
 
@@ -56,6 +62,7 @@ export class SingleProject extends Component {
         });
         let match = results[0];
 
+
         this.setState({
             match: match
         });
@@ -68,14 +75,16 @@ export class SingleProject extends Component {
     cartouche(){
         return(
             <div className="cartouche">
+                {this.state.match.content && 
                 <div className="content">
                     {parse(this.state.match.content)}
                 </div>
+                }
             </div>
         );
     }
     
-
+    //Je ne sais pas si j'ai encore besoin de ça.
     shouldComponentUpdate() { 
         return true; 
     }
@@ -87,16 +96,17 @@ export class SingleProject extends Component {
         
         //Bon, à un moment, ça va ne pas exister... 
         //Là il faudra gérer...
-
+        
         let prev = match.prev;
-        let next = match.next;
 
+        let next = match.next;
+        
         return (
             <div id="singleProject">
-                {match.medias.length > 0 &&
                     <div className={`grid ${match.slug}`}>
                         {this.cartouche()}
-                        {match.medias.map((media, index) => (
+                
+                        {match.medias.length > 0 && match.medias.map((media, index) => (
                             <div
                                 key={index}
                                 className={`media media${index}`}
@@ -116,35 +126,18 @@ export class SingleProject extends Component {
                                 }
                             </div>
                         ))}
-                        <ProjectNav direction="prev" arrow="left" link={`/projet/${prev.slug}`} text="Projet précédent" />
 
-                        <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Projet suivant" />
-                        {/* ok ce lien là fonctionne... */}
-                        {/*
-                        <Link 
-                            to='/projet/afrika-glam' 
-                            className="nav nav-next" 
-                            // onClick={(paramSlug) => this.handlePrev('afrika-glam')}
-                        >
-                            <i className="fa fa-arrow-left"></i>
-                            &nbsp;Projet précédent
-                        </Link>
-
-                        <Link 
-                            to='/projet/afrika-glam' 
-                            className="nav nav-next" 
-                            // onClick={(paramSlug) => this.handleNext('afrika-glam')}
-                        >
-                            <i className="fa fa-arrow-right"></i>
-                            &nbsp;Projet suivant
-                        </Link>
-                        */}
-
+                        {prev && 
+                            <ProjectNav direction="prev" arrow="left" link={`/projet/${prev.slug}`} text="Projet précédent" />
+                        }
+                        {next && 
+                           <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Projet suivant" />
+                        }
+                        
                         <div className="blank">{/* Just an empty color placeholder for grid layout */}</div>
                         <div className="black">{/* Just an empty color placeholder for grid layout */}</div>
                         <div className="yellow">{/* Just an empty color placeholder for grid layout */}</div>
                     </div>
-                }
             </div>
         )
     }
