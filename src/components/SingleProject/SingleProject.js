@@ -6,6 +6,12 @@ import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 
 import loader from '../../assets/img/loader.gif';
 
+//https://www.npmjs.com/package/react-lazy-load
+import LazyLoad from 'react-lazy-load';
+
+import Image from '../../elements/Image/Image.js';
+
+
 export class SingleProject extends Component {
     constructor(props) {
 
@@ -23,9 +29,11 @@ export class SingleProject extends Component {
             }
         });
         let match = results[0];
+
         this.state = {
             match: match,
-            isNew: false
+            isNew: false,
+            //isLoading:true
         }
         
         //this.handleNext = this.handleNext.bind(this);
@@ -36,25 +44,35 @@ export class SingleProject extends Component {
 
     componentDidMount() {
         
-        window.scrollTo(0, 0);
         
         this.smallHeader();
 
-        let ocLoaderContainer = document.querySelector('#ocLoaderContainer');
-        ocLoaderContainer.style.display = "none";
+
+        //window.addEventListener('load', this.handleLoad);
+
+
+     
+
+    }
+
+    componentWillUpdate(){
+        console.log('componentWillUpdate!');
+
+        let imgs = document.querySelectorAll('#singleProject img');
+
+        if(imgs){
+            imgs.forEach(function(img){
+                img.removeAttribute('src')
+            });
+        }
     }
 
     componentDidUpdate(){
-        //alert('didupdate!');
-
-        //Cette logique n'est pas bonne
-        /*
-        let singleProject = document.querySelector('#singleProject');
-        singleProject.style.display = "block";
-
-        let ocLoaderContainer = document.querySelector('#ocLoaderContainer');
-        ocLoaderContainer.style.display = "none";
-        */
+        console.log('componentDidUpdate!');
+        setTimeout(function(){
+            window.scrollTo(0, 0);
+        },1000);
+        
     }
 
     smallHeader(){
@@ -68,19 +86,9 @@ export class SingleProject extends Component {
 
         window.scrollTo(0, 0);
 
-
-        //On va cacher ça pour l'instant...
-        /*
-        let singleProject = document.querySelector('#singleProject');
-        singleProject.style.display="none";
-
-        let ocLoaderContainer = document.querySelector('#ocLoaderContainer');
-        ocLoaderContainer.style.display = "block";
-        */
-
         let paramSlug = nextProps.match.params.slug;
 
-        console.log(paramSlug);
+       
 
 
         let results = data.filter(function (entry, index) {
@@ -98,6 +106,8 @@ export class SingleProject extends Component {
         this.setState({
             match: match
         });
+
+        
     }
 
 
@@ -120,27 +130,30 @@ export class SingleProject extends Component {
         return true; 
     }
 
+    imgOnLoad(e){
+        e.target.classList.add('is-loaded');
+    }
+
     render() {
 
         let isLoading = this.state.isLoading;
         let match = this.state.match;
         
-        //Bon, à un moment, ça va ne pas exister... 
-        //Là il faudra gérer...
-        
         let prev = match.prev;
-
         let next = match.next;
         
         return (
             <div id="singleProject">
-                <div id="ocLoaderContainer">
-                    <img src={loader} alt=""/>
-                </div>
+                {this.state.isLoading ? (    
+                    <div id="ocLoaderContainer">
+                        <img src={loader} alt=""/>
+                    </div>
+                ):(
                 <div id="projectGrid" className={`grid ${match.slug}`}>
                     {this.cartouche()}
             
                     {match.medias.length > 0 && match.medias.map((media, index) => (
+                        
                         <div
                             key={index}
                             className={`media media${index}`}
@@ -149,7 +162,7 @@ export class SingleProject extends Component {
                             }}
                         >
                             {media.type === 'image' &&
-                                <img src={media.src} alt="" />
+                                <Image src={media.src}/>
                             }
                             {media.type === 'video' &&
                                 <div className="video">
@@ -167,6 +180,8 @@ export class SingleProject extends Component {
                                 </div>
                             }
                         </div>
+                        
+
                     ))}
 
                     {prev && 
@@ -180,6 +195,7 @@ export class SingleProject extends Component {
                     <div className="black">{/* Just an empty color placeholder for grid layout */}</div>
                     <div className="yellow">{/* Just an empty color placeholder for grid layout */}</div>
                 </div>
+                )}
             </div>
         )
     }

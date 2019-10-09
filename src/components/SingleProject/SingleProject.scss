@@ -2,12 +2,34 @@
 
 
 #singleProject{
-    .grid{
+    position:relative;
+    #ocLoaderContainer{
+        position:absolute;
+        z-index:5;
+
+        border:5px dashed tomato;
+        top:0px;
+        bottom:0px;
+        left:0px;
+        right:0px;
+
+        display:flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        background-color:black;
+
+        img{
+            display:block;
+            border:5px dashed lightblue;
+        }
+    }
+
+    #projectGrid.grid{
         min-height:100vh;
         display:grid;
         background-color: silver;
         grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
-        //grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
         .cartouche{
             background-color:white;
             padding:25px;
@@ -18,6 +40,7 @@
             justify-content: center;
         }
 
+        /*
         .media{
             opacity:0;
             animation-name:animMedia;
@@ -32,14 +55,24 @@
                 }
             }
         }
+        */
 
-        .media img{
-            object-fit: cover;
-            width:100%;
-            height:100%;
-            display:block;
-            max-width: 100vw;
-            object-position: center center;
+        .media{ 
+            img{
+                object-fit: cover;
+                width:100%;
+                height:100%;
+                display:block;
+                max-width: 100vw;
+                object-position: center center;
+                transition:all 1s;
+                opacity:1;
+                /*
+                &.is-loaded{
+                    opacity:1;
+                }
+                */
+            }
         }
         
         .nav-prev{

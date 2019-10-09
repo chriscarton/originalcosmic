@@ -26,15 +26,29 @@
             font-size:3rem;
             font-weight: bold;
             color:$yellow;
+            font-family:"Cocogoose";
+            margin:0px;
+        }
+        #typed{
+            font-family:monospace;
+            color:$yellow;
+            font-weight: bold;
+            font-size:1.8rem;
         }
         transition:all 2s ease-out;
         &.to-out{
-            transform:translateY(-200px);
+            //transform:translateY(-200px);
             opacity:0;
         }
     }
     #Video{
         display:none;
         color:white;
+        margin-left:auto;
+        margin-right:auto;
+        video{
+            width: 100%;
+            height: auto;
+        }
     }
 }
