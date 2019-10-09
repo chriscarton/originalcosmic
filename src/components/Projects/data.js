@@ -75,7 +75,7 @@ let data = [
             },
             {
                 type:"playlist",
-                src:"<iframe width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/805416213&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>"
+                src:"<iframe width='100%' height='500' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/805416213&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>"
             }
         ]
     },
@@ -90,7 +90,6 @@ let data = [
                 type:"iframe",
                 src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/WEjdhLse2Sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
-            //Mettre la video?
         ]
     },
     {
@@ -200,8 +199,8 @@ let data = [
         slug:'omg',
         medias: [
             {
-                type:"video",
-                src:"https://www.youtube.com/watch?v=i0NQXLxOXEo&feature=youtu.be"
+                type:"iframe",
+                src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/i0NQXLxOXEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
         ]
     },
@@ -256,8 +255,8 @@ let data = [
                 src: "http://originalcosmic.fr/wp-content/uploads/2019/02/ronanrayonsvin-1440x960.jpg"
             },
             {
-                type: "video",
-                src: "https://www.youtube.com/watch?v=sES64_1VmVU"
+                type: "iframe",
+                src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/sES64_1VmVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             },
             {
                 type: "image",
@@ -273,8 +272,8 @@ let data = [
         slug: "vendetta",
         medias: [
             {
-                type: "video",
-                src: "https://www.youtube.com/watch?v=Mg_s40GsIbo"
+                type: "iframe",
+                src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Mg_s40GsIbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
         ]
     }

@@ -6,8 +6,17 @@ import './ProjectNav.scss';
 
 export class ProjectNav extends Component {
 
-    
-    
+    /*
+    handleClick(){
+        alert('handleClick');
+        let singleProject = document.querySelector('#singleProject');
+        singleProject.innerHTML="ICI IL N'Y A PLUS RIEN.";
+        alert('handleClick BIS');
+
+        //Bon ici je n'arrive pas à passer au projet suivant
+        //Ça enlève le contenu...
+    }
+    */
 
     render() {
         

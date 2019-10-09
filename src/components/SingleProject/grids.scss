@@ -1,41 +1,36 @@
 @import '../../variables.scss';
 
-/*
-Redisposer ces éléments au cas par cas
-    grid
-    cartouche
-    media
-    nav-prev
-    nav-next
-    blank
-    black
-    yellow
-*/
 
-//Le problème c'est que là tout est très encombré...
+//D'abord on commence par le mobile : 
+.original-cosmic-playlist{
+    .media1{
+        background-color:$yellow;
+        padding:25px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
 
 @media screen and (min-width:600px){
 
     .alex-le-fou{
-        //960
+        
     }
     .amanda-is{
 
     }
 
-    //Il y a comme un overflow...
-    .le-deserteur{
-        //background-color:#EEC760;
-        
+    .le-deserteur{        
         grid-template-areas:
             'media0 media0 media0 media0'
             'cartou cartou media1 media2'
             'cartou cartou media3 media4'
             '.      media5 previo nextio'
         ;
-
-        
-
     }
     .afrika-glam{
         background-color:#BC3633;
@@ -61,16 +56,15 @@ Redisposer ces éléments au cas par cas
             'cartou cartou cartou cartou previo nextio'
         ;
        
-        .media1{
-            background-color:$yellow;
-            padding:25px;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-        }
+        
     }
     .paleo{
         //Intégrer la vidéo et faire la mise en page...
+        grid-template-areas: 
+            'media0 media0 media0'
+            'cartou previo nextio'
+        ;
+        
     }
     .the-mice{
         grid-template-areas:
@@ -78,14 +72,6 @@ Redisposer ces éléments au cas par cas
             'media1 media1 cartou media2 media2'
             'media1 media1 cartou previo nextio'
         ;
-
-        .media0{
-            grid-area:media0;
-        }
-
-        .media1{
-            grid-area:media1;
-        }
 
         .media2{
             background-color: #97AA73;
@@ -95,9 +81,6 @@ Redisposer ces éléments au cas par cas
             justify-content: center;
         }
 
-        .media2{
-            grid-area:media2;
-        }
     }
     .yellow-and-blue{
         background-color:#132990;
@@ -108,36 +91,68 @@ Redisposer ces éléments au cas par cas
         ;
     }
     .akina-wise{
-            
         grid-template-areas: 
-            'media0 media0 media0'
-            'cartou media0 media0'
-            '.      cartou previo'
+            'cartou media0 media0 media0'
+            'cartou media0 media0 media0'
+            'cartou media1 media1 media1'
+            'previo previo nextio nextio'
         ;
     }
     .eldorado-afro{
-
+        grid-template-areas:
+            'media0 media0'
+            'cartou cartou'
+            'previo nextio'
+        ;
     }
     .ombres-colorees{
-
+        grid-template-areas:
+            'media0 media0'
+            'cartou cartou'
+            'previo nextio'
+        ;
     }
     .maescroc{
-
+        grid-template-areas:
+            'media0 media0 media1 media1 media1'
+            'previo cartou cartou cartou nextio'
+        ;
     }
     .omg{
-
+        grid-template-areas:
+            'media0 media0 media0'
+            'cartou cartou previo'
+            'cartou cartou nextio'
+        ;
     }
     .doux-divorce-records{
-
+        grid-template-areas:
+            'media0 media0 media1 media1'
+            'media2 media2 cartou cartou'
+            'previo .      .      nextio'
     }
     .ronan-martin{
-
+        grid-template-areas:
+            'media0 media0 media0'
+            'media1 media1 previo'
+            'media1 media1 cartou'
+            'media1 media1 nextio'
+        ;
     }
     .ronan-martin-les-rayons{
-
+        grid-template-areas:
+            'media0 media0 media0 media0'
+            'media0 media0 media0 media0'
+            'media1 media1 media1 media1'
+            'media1 media1 media1 media1'
+            'cartou media2 media2 media2'
+            'cartou previo nextio nextio'
     }
     .vendetta{
-
+        grid-template-columns:1fr 10fr;
+        grid-template-areas:
+            'media0 media0 media0'
+            'previo cartou cartou'
     }
 
 }

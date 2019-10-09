@@ -6,10 +6,8 @@
         min-height:100vh;
         display:grid;
         background-color: silver;
-        //grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
-        //grid-auto-rows: auto;
+        //grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
         .cartouche{
             background-color:white;
             padding:25px;
@@ -42,19 +40,13 @@
             display:block;
             max-width: 100vw;
             object-position: center center;
-            //min-height:320px;
-            //min-width:320px;
         }
         
         .nav-prev{
             padding:50px;
-            //min-height:320px;
-            //min-width:320px;
         }
         .nav-next{
             padding:50px;
-            //min-height:320px;
-            //min-width:320px;
         }
         .blank{
             background-color:white;
@@ -70,33 +62,36 @@
         }
 
         //Du générique...
+        @media screen and (min-width:600px){
+        
+            .cartouche{
+                grid-area:cartou;
+            }
+            .media0{
+                grid-area:media0;
+            }
+            .media1{
+                grid-area:media1;
+            }
+            .media2{
+                grid-area:media2;
+            }
+            .media3{
+                grid-area:media3;
+            }
+            .media4{
+                grid-area:media4;
+            }
+            .media5{
+                grid-area:media5;
+            }
+            .nav-prev{
+                grid-area:previo;
+            }
+            .nav-next{
+                grid-area:nextio;
+            }
 
-        .cartouche{
-            grid-area:auto / cartou;
-        }
-        .media0{
-            grid-area:auto / media0;
-        }
-        .media1{
-            grid-area:auto / media1;
-        }
-        .media2{
-            grid-area:auto / media2;
-        }
-        .media3{
-            grid-area:auto / media3;
-        }
-        .media4{
-            grid-area:auto / media4;
-        }
-        .media5{
-            grid-area:auto / media5;
-        }
-        .nav-prev{
-            grid-area:auto / previo;
-        }
-        .nav-next{
-            grid-area:auto / nextio;
         }
         
     }

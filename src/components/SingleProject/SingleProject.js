@@ -4,6 +4,8 @@ import './SingleProject.scss';
 import parse from 'html-react-parser';
 import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
 
+import loader from '../../assets/img/loader.gif';
+
 export class SingleProject extends Component {
     constructor(props) {
 
@@ -30,12 +32,29 @@ export class SingleProject extends Component {
 
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0);
-        //alert('didMount');
 
-        this.smallHeader();
+
+    componentDidMount() {
         
+        window.scrollTo(0, 0);
+        
+        this.smallHeader();
+
+        let ocLoaderContainer = document.querySelector('#ocLoaderContainer');
+        ocLoaderContainer.style.display = "none";
+    }
+
+    componentDidUpdate(){
+        //alert('didupdate!');
+
+        //Cette logique n'est pas bonne
+        /*
+        let singleProject = document.querySelector('#singleProject');
+        singleProject.style.display = "block";
+
+        let ocLoaderContainer = document.querySelector('#ocLoaderContainer');
+        ocLoaderContainer.style.display = "none";
+        */
     }
 
     smallHeader(){
@@ -46,6 +65,19 @@ export class SingleProject extends Component {
 
     //fuck hell ben ça ça marche...
     componentWillReceiveProps(nextProps) {
+
+        window.scrollTo(0, 0);
+
+
+        //On va cacher ça pour l'instant...
+        /*
+        let singleProject = document.querySelector('#singleProject');
+        singleProject.style.display="none";
+
+        let ocLoaderContainer = document.querySelector('#ocLoaderContainer');
+        ocLoaderContainer.style.display = "block";
+        */
+
         let paramSlug = nextProps.match.params.slug;
 
         console.log(paramSlug);
@@ -71,7 +103,6 @@ export class SingleProject extends Component {
 
 
 
-
     cartouche(){
         return(
             <div className="cartouche">
@@ -91,7 +122,7 @@ export class SingleProject extends Component {
 
     render() {
 
-
+        let isLoading = this.state.isLoading;
         let match = this.state.match;
         
         //Bon, à un moment, ça va ne pas exister... 
@@ -103,49 +134,52 @@ export class SingleProject extends Component {
         
         return (
             <div id="singleProject">
-                    <div className={`grid ${match.slug}`}>
-                        {this.cartouche()}
-                
-                        {match.medias.length > 0 && match.medias.map((media, index) => (
-                            <div
-                                key={index}
-                                className={`media media${index}`}
-                                style={{
-                                    animationDelay:index*0.75+'s'
-                                }}
-                            >
-                                {media.type === 'image' &&
-                                    <img src={media.src} alt="" />
-                                }
-                                {media.type === 'video' &&
-                                    <div className="video">
-                                        {media.src}
-                                    </div>
-                                }
-                                {media.type === 'playlist' &&
-                                    <div className="playlist">
-                                        {parse(media.src)}
-                                    </div>
-                                }
-                                {media.type === 'iframe' &&
-                                    <div className="iframe">
-                                        {parse(media.src)}
-                                    </div>
-                                }
-                            </div>
-                        ))}
+                <div id="ocLoaderContainer">
+                    <img src={loader} alt=""/>
+                </div>
+                <div id="projectGrid" className={`grid ${match.slug}`}>
+                    {this.cartouche()}
+            
+                    {match.medias.length > 0 && match.medias.map((media, index) => (
+                        <div
+                            key={index}
+                            className={`media media${index}`}
+                            style={{
+                                animationDelay:index*0.75+'s'
+                            }}
+                        >
+                            {media.type === 'image' &&
+                                <img src={media.src} alt="" />
+                            }
+                            {media.type === 'video' &&
+                                <div className="video">
+                                    {media.src}
+                                </div>
+                            }
+                            {media.type === 'playlist' &&
+                                <div className="playlist">
+                                    {parse(media.src)}
+                                </div>
+                            }
+                            {media.type === 'iframe' &&
+                                <div className="iframe-container">
+                                    {parse(media.src)}
+                                </div>
+                            }
+                        </div>
+                    ))}
 
-                        {prev && 
-                            <ProjectNav direction="prev" arrow="left" link={`/projet/${prev.slug}`} text="Projet précédent" />
-                        }
-                        {next && 
-                           <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Projet suivant" />
-                        }
-                        
-                        <div className="blank">{/* Just an empty color placeholder for grid layout */}</div>
-                        <div className="black">{/* Just an empty color placeholder for grid layout */}</div>
-                        <div className="yellow">{/* Just an empty color placeholder for grid layout */}</div>
-                    </div>
+                    {prev && 
+                        <ProjectNav direction="prev" arrow="left" link={`/projet/${prev.slug}`} text="Projet précédent" />
+                    }
+                    {next && 
+                        <ProjectNav direction="next" arrow="right" link={`/projet/${next.slug}`} text="Projet suivant" />
+                    }
+                    
+                    <div className="blank">{/* Just an empty color placeholder for grid layout */}</div>
+                    <div className="black">{/* Just an empty color placeholder for grid layout */}</div>
+                    <div className="yellow">{/* Just an empty color placeholder for grid layout */}</div>
+                </div>
             </div>
         )
     }
