@@ -9,13 +9,17 @@ export class Tests extends Component {
     }
 
     render() {
-
+        /*
         let myJSON = JSON.stringify(data,null,'\t');
         console.log(myJSON);
-
+        */
         return (
             <div id="Tests">
-                {myJSON}
+                {/* {myJSON} */}
+                <div className="title">
+                    Cocogoose!
+                </div>
+                <p>Et voici une phrase!</p>
             </div>
         )
     }

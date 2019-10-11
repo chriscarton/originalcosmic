@@ -72,30 +72,7 @@
         }
         */
 
-        .media{ 
-
-            
-
-            img{
-                object-fit: cover;
-                width:100%;
-                height:100%;
-                display:block;
-                max-width: 100vw;
-                object-position: center center;
-                transition:all 1s;
-                
-
-                &.loader{
-                    object-fit: none;
-                    width:auto;
-                    height:auto;
-                    align-self: center;
-                    justify-content: center;
-                    max-width:100px;
-                }
-            }
-        }
+        
         
         .nav-prev{
             padding:50px;

@@ -4,4 +4,20 @@
     width:75%;
     margin-left: auto;
     margin-right:auto;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .title{
+        font-size:4rem;
+        color:$yellow;
+        font-family:"COCOGOOSE";
+        margin:0px;
+    }
+    p{
+        font-family:"Ubuntu Mono";
+        color:$yellow;
+        font-size:1.8rem;
+    }
 }

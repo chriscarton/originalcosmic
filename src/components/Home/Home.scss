@@ -24,17 +24,16 @@
         }
         .title{
             font-size:3rem;
-            font-weight: bold;
             color:$yellow;
-            font-family:"Cocogoose";
+            font-family:"COCOGOOSE";
             margin:0px;
         }
         #typed{
-            font-family:monospace;
-            color:$yellow;
-            font-weight: bold;
-            font-size:1.8rem;
+            font-family:"Ubuntu Mono";
+        color:$yellow;
+        font-size:1.8rem;
         }
+
         transition:all 2s ease-out;
         &.to-out{
             //transform:translateY(-200px);
