@@ -3,6 +3,7 @@ import data from '../Projects/data.js';
 import './SingleProject.scss';
 import parse from 'html-react-parser';
 import ProjectNav from '../../elements/ProjectNav/ProjectNav.js';
+import Media from '../../elements/Media/Media.js';
 
 import loader from '../../assets/img/loader.gif';
 
@@ -155,36 +156,10 @@ export class SingleProject extends Component {
             
                     {match.medias.length > 0 && match.medias.map((media, index) => (
                         
-                        <div
-                            key={index}
-                            className={`media media${index}`}
-                            style={{
-                                animationDelay:index*0.75+'s'
-                            }}
-                        >
-                            {media.type === 'image' &&
-                                // <Image src={media.src}/>
-                                // <Img src={media.src} loader={loading} />
-
-                                <img src={`/img/medias/${media.src}`} alt={media.src} />
-                            }
-                            {media.type === 'video' &&
-                                <div className="video">
-                                    {media.src}
-                                </div>
-                            }
-                            {media.type === 'playlist' &&
-                                <div className="playlist">
-                                    {parse(media.src)}
-                                </div>
-                            }
-                            {media.type === 'iframe' &&
-                                <div className="iframe-container">
-                                    {parse(media.src)}
-                                </div>
-                            }
-                        </div>
-                        
+                        <Media
+                            index={index}
+                            media={media}
+                        />
 
                     ))}
 
