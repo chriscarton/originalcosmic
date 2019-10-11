@@ -34,10 +34,10 @@
     }
     .afrika-glam{
         background-color:#BC3633;
-        
         grid-template-areas: 
             'media0 media0 media0 media0'
-            'cartou cartou previo nextio'
+            'cartou media1 media1 previo'
+            'cartou media1 media1 nextio'
         ;
         .media img{
             object-fit: contain;

@@ -24,27 +24,27 @@ let data = [
         medias:[
             {
                 type:'image',
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/06/DSRTRFONNW.jpg",
+                src:"DSRTRFONNW.jpg",
             },
             {
                 type:'image',
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/05/DSRTRmock1a-480x480.jpg",
+                src:"DSRTRmock1a-480x480.jpg",
             },
             {
                 type:'image',
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/05/DSRTRmock2a-480x480.jpg",
+                src:"DSRTRmock2a-480x480.jpg",
             },
             {
                 type:'image',
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/05/DSRTRmock3a-480x480.jpg",
+                src:"DSRTRmock3a-480x480.jpg",
             },
             {   
                 type:'image',
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/05/DSRTRmock4a-480x480.jpg",
+                src:"DSRTRmock4a-480x480.jpg",
             },
             {
                 type:'image',
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/05/DSRTRmock5a-480x480.jpg"
+                src:"DSRTRmock5a-480x480.jpg"
             }
         ]
     },
@@ -54,11 +54,14 @@ let data = [
         img:"004_afglamoc-2-960x960.jpg",
         content: "AFRIKA GLAM Pour Afrika Box<hr>Direction artistique<br>Photographie<br>Design graphique<br>Print<br>2019",
         slug:"afrika-glam",
-        cover:"http://originalcosmic.fr/wp-content/uploads/2019/03/AFGLAMA0PTA-960x960.jpg",
         medias:[
             {
+                type: "image",
+                src: "AFGLAMA0PTA-960x960.jpg"
+            },
+            {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/03/AFRIKAGLAMPOSTCARD-1440x960.jpg"
+                src:"AFRIKAGLAMPOSTCARD-1440x960.jpg"
             }
         ]
     },
@@ -71,7 +74,7 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/06/ocp1.gif"
+                src:"ocp1.gif"
             },
             {
                 type:"playlist",
@@ -101,11 +104,11 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/themicevinyl-1440x960.jpg",
+                src:"themicevinyl-1440x960.jpg",
             },
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/micecover2-960x960.jpg"
+                src:"micecover2-960x960.jpg"
             },
             {
                 type:"iframe",
@@ -122,7 +125,7 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/fb8b0920194783.562e73d182e89-1336x890.jpg"
+                src:"fb8b0920194783.562e73d182e89-1336x890.jpg"
             }
         ]
     },
@@ -135,11 +138,11 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/akinavinyl-1440x960.jpg"
+                src:"akinavinyl-1440x960.jpg"
             },
             {
                 type: "image",
-                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/akinados-960x960.jpg"
+                src: "akinados-960x960.jpg"
             }
         ]
     },
@@ -152,7 +155,7 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/06/EldoradoAfroAff-960x1440.jpg"
+                src:"EldoradoAfroAff-960x1440.jpg"
             }
             //there is none...
         ]
@@ -170,7 +173,7 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/05/WAKAMOCKPOSTOC-1440x1440.jpg"
+                src:"WAKAMOCKPOSTOC-1440x1440.jpg"
             }
         ]
     },
@@ -183,11 +186,11 @@ let data = [
         medias:[
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/9e290317527117.56647b81cf2d0-960x960.jpg"
+                src:"9e290317527117.56647b81cf2d0-960x960.jpg"
             },
             {
                 type: "image",
-                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/f0238c17527117.5664a1a5ad5a0-1-433x866.jpg"
+                src: "f0238c17527117.5664a1a5ad5a0-1-433x866.jpg"
             }
         ]
     },
@@ -213,15 +216,15 @@ let data = [
         medias: [
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/13925472_1153557848000435_706687528803582981_o-960x960.png"
+                src:"13925472_1153557848000435_706687528803582981_o-960x960.png"
             },
             {
                 type: "image",
-                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/13909005_574832796029717_191003813203858820_o-480x480.jpg"
+                src: "13909005_574832796029717_191003813203858820_o-480x480.jpg"
             },
             {
                 type: "image",
-                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/11021112_878714695484753_6208556186257630867_n-480x480.jpg"
+                src: "11021112_878714695484753_6208556186257630867_n-480x480.jpg"
             }
         ]
     },
@@ -234,11 +237,11 @@ let data = [
         medias: [
             {
                 type: "image",
-                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/ronaninter3-1920x960.jpg"
+                src: "ronaninter3-1920x960.jpg"
             },
             {
                 type:"image",
-                src:"http://originalcosmic.fr/wp-content/uploads/2019/02/rmdosvinl-960x960.jpg"
+                src:"rmdosvinl-960x960.jpg"
             }
             
         ]
@@ -252,7 +255,7 @@ let data = [
         medias: [
             {
                 type: "image",
-                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/ronanrayonsvin-1440x960.jpg"
+                src: "ronanrayonsvin-1440x960.jpg"
             },
             {
                 type: "iframe",
@@ -260,7 +263,7 @@ let data = [
             },
             {
                 type: "image",
-                src: "http://originalcosmic.fr/wp-content/uploads/2019/02/1907526_913693705320185_9131023012842273479_n-480x480.png"
+                src: "1907526_913693705320185_9131023012842273479_n-480x480.png"
             }
         ]
     },
@@ -281,4 +284,3 @@ let data = [
 
 ];
 export default data;
-

@@ -9,8 +9,8 @@ import loader from '../../assets/img/loader.gif';
 //https://www.npmjs.com/package/react-lazy-load
 import LazyLoad from 'react-lazy-load';
 
-import Image from '../../elements/Image/Image.js';
-
+//import Image from '../../elements/Image/Image.js';
+import Img from 'react-image';
 
 export class SingleProject extends Component {
     constructor(props) {
@@ -102,12 +102,11 @@ export class SingleProject extends Component {
         });
         let match = results[0];
 
-
-        this.setState({
-            match: match
-        });
-
-        
+        setTimeout(()=>{
+            this.setState({
+                match: match
+            });
+        },1000);
     }
 
 
@@ -142,6 +141,8 @@ export class SingleProject extends Component {
         let prev = match.prev;
         let next = match.next;
         
+        let loading = <img src={loader} className="loader" alt="" />;
+
         return (
             <div id="singleProject">
                 {this.state.isLoading ? (    
@@ -162,7 +163,10 @@ export class SingleProject extends Component {
                             }}
                         >
                             {media.type === 'image' &&
-                                <Image src={media.src}/>
+                                // <Image src={media.src}/>
+                                // <Img src={media.src} loader={loading} />
+
+                                <img src={`/img/medias/${media.src}`} alt={media.src} />
                             }
                             {media.type === 'video' &&
                                 <div className="video">

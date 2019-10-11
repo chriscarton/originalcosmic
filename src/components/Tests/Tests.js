@@ -3,10 +3,27 @@ import './Tests.scss';
 import data from '../Projects/data.js';
 
 export class Tests extends Component {
+
+    constructor(props){
+        super(props);
+    }
+
     render() {
+
+        let myJSON = JSON.stringify(data,null,'\t');
+        console.log(myJSON);
+
         return (
             <div id="Tests">
-                Voilà mes tests...
+                {myJSON}
+            </div>
+        )
+    }
+}
+
+/*
+
+Voilà mes tests...
                 <p>Afficher les slugs de data.js</p>
                 <hr/>
                 {data.map(function(project){
@@ -16,9 +33,6 @@ export class Tests extends Component {
                     </div>
                     )
                 })}
-            </div>
-        )
-    }
-}
+*/
 
 export default Tests
