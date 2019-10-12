@@ -25,27 +25,47 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //On met du font awesome
 import './assets/font-awesome-4.7.0/css/font-awesome.min.css';
 
+//Et react-pose pour les transitions entre les routes
+import posed, { PoseGroup } from 'react-pose';
+
+const RouteContainer = posed.div({
+  enter: { opacity: 1, delay: 300, beforeChildren: true },
+  exit: { opacity: 0 }
+});
+
 export class App extends Component {
 
 
   render(){
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <div className="App">
-          <Header/>
-          <main id="mainContent">
-            <Switch>
-              <Route path="/" exact component={Homepage}/>
-              <Route path="/studio" exact component={Studiocontact} />
-              <Route path="/projets" exact component={AllProjects} />
-              <Route path="/projet/:slug" exact component={SingleProject} />
 
-              <Route path="/tests" exact component={Tests} />
+        <Route
+          render={({ location }) => (
 
-            </Switch>
-          </main>
-          <Footer/>
-        </div>
+          <div className="App">
+            <Header/>
+            <PoseGroup>
+              <RouteContainer key={location.key}>
+                <main id="mainContent">
+                  <Switch location={location}>
+                    <Route path="/" exact component={Homepage}/>
+                    <Route path="/studio" exact component={Studiocontact} />
+                    <Route path="/projets" exact component={AllProjects} />
+                    <Route path="/projet/:slug" exact component={SingleProject} />
+
+                    <Route path="/tests" exact component={Tests} />
+
+                  </Switch>
+                </main>
+              </RouteContainer>
+            </PoseGroup>
+
+            <Footer/>
+          </div>
+
+          )}>
+        </Route>
       </Router>
     );
   }
