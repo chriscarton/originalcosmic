@@ -3,6 +3,7 @@
 
 //D'abord on commence par le mobile : 
 .original-cosmic-playlist{
+    grid-template-columns: 1fr 1fr;
     .media1{
         background-color:$yellow;
         padding:25px;
@@ -51,12 +52,10 @@
     }
     .original-cosmic-playlist{
         grid-template-areas: 
-            'media0 media1 media1 media1 media1 media1'
-            'media0 media1 media1 media1 media1 media1'
-            'cartou cartou cartou cartou previo nextio'
+            'media0 media1'
+            'cartou cartou'
+            'previo nextio'
         ;
-       
-        
     }
     .paleo{
         //Intégrer la vidéo et faire la mise en page...

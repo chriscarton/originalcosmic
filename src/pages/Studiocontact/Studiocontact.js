@@ -3,6 +3,16 @@ import './Studiocontact.scss';
 import StudioContent from '../../contents/Studio/Studio.js';
 
 export class Studiocontact extends Component {
+    
+    componentDidMount() {
+        this.smallHeader();
+    }
+    
+    smallHeader(){
+        let header = document.querySelector('#Header');
+        header.classList.add('small-header')
+    }
+
     render() {
         return (
             <div className="page" id="Studiocontact">

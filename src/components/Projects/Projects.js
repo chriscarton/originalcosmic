@@ -20,7 +20,25 @@ export class Projects extends Component {
                     {this.state.projects.map((item)=>(
                         <div className={`item ${item.slug}`} key={item.id}>
                             <Link to={`projet/${item.slug}`}>
-                                <img src={`/img/projects/${item.img}`} alt={item.img}/>
+                                
+
+                                {item.cover.type=="image" &&
+                                    <img src={`/img/projects/${item.cover.src}`} alt=""/>
+                                }
+                                {item.cover.type == "videogif" &&
+                                    <video
+                                        className="videogif"
+                                        autoPlay
+                                        loop
+                                    >
+                                        <source
+                                            src={'/img/projects/' + item.cover.src}
+                                            type="video/mp4"
+                                        />
+                                        Votre navigateur ne supporte pas la vidéo.
+                                    </video>
+                                }
+
                             </Link>
                         </div>
                     ))}

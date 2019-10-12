@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+#notFound{
+    text-align: center;
+    min-height:100vh;
+    background-color:$yellow;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+
+    .backlink{
+        margin:20px;
+        font-family: 'Ubuntu Mono';
+        border:1px solid white;
+        padding:15px;
+        color:white;
+        display:inline-block;
+        text-decoration: none;
+    }
+}

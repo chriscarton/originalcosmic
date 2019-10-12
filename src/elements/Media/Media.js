@@ -40,12 +40,12 @@ export class Media extends Component {
                         </div>
                         <img 
                             src={`/img/medias/placeholders/${media.src}`} 
-                            alt={media.src} 
+                            alt="" 
                             className="placeholder" 
                         />
                         <img 
                             src={`/img/medias/${media.src}`} 
-                            alt={media.src} 
+                            alt="" 
                             className="original" 
                             onLoad={(e)=>this.imageLoaded(e)}
                         />
@@ -55,6 +55,19 @@ export class Media extends Component {
                     <div className="video">
                         {media.src}
                     </div>
+                }
+                {media.type === 'videogif' &&
+                    <video
+                        className="videogif"
+                        autoPlay 
+                        loop
+                    >
+                        <source 
+                            src={'/img/medias/'+media.src} 
+                            type="video/mp4" 
+                        />
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
                 }
                 {media.type === 'playlist' &&
                     <div className="playlist">

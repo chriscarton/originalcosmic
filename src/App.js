@@ -17,6 +17,8 @@ import Studiocontact from './pages/Studiocontact/Studiocontact.js';
 import AllProjects from './components/AllProjects/AllProjects.js';
 import SingleProject from './components/SingleProject/SingleProject.js';
 
+//Et mon not found
+import NotFound from './components/NotFound/NotFound';
 
 //On va faire nos jolies petites routes.
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -39,33 +41,32 @@ export class App extends Component {
   render(){
     return (
       <Router basename={process.env.PUBLIC_URL}>
+        <div className="App">
+          <Header/>
+          <Route
+            render={({ location }) => (
+            <main id="mainContent">
+                <PoseGroup>
+                  <RouteContainer key={location.pathname}>
+                  
+                    <Switch location={location}>
+                      <Route path="/" exact component={Homepage}/>
+                      <Route path="/studio" exact component={Studiocontact} />
+                      <Route path="/projets" exact component={AllProjects} />
+                      <Route path="/projet/:slug" exact component={SingleProject} />
 
-        <Route
-          render={({ location }) => (
+                      <Route path="/tests" exact component={Tests} />
+                      <Route component={NotFound} />
+                    </Switch>
+                  </RouteContainer>
+                </PoseGroup>
+              
+            </main>
+            )}>
+          </Route>
 
-          <div className="App">
-            <Header/>
-            <PoseGroup>
-              <RouteContainer key={location.key}>
-                <main id="mainContent">
-                  <Switch location={location}>
-                    <Route path="/" exact component={Homepage}/>
-                    <Route path="/studio" exact component={Studiocontact} />
-                    <Route path="/projets" exact component={AllProjects} />
-                    <Route path="/projet/:slug" exact component={SingleProject} />
-
-                    <Route path="/tests" exact component={Tests} />
-
-                  </Switch>
-                </main>
-              </RouteContainer>
-            </PoseGroup>
-
-            <Footer/>
-          </div>
-
-          )}>
-        </Route>
+          <Footer/>
+        </div>
       </Router>
     );
   }
