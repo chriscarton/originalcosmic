@@ -128,3 +128,16 @@ https://rigor.com/blog/optimizing-animated-gifs-with-html5-video
 Du coup mon intégration comment ça se passe ?
 
 
+# Redimensionner des images avec mogrify 
+
+Redimensionne toutes les images jpg **qui font plus de 320px de large** à 320px de large dans un dossier 320 :
+
+    mogrify -path 320 -resize 320x "320x>" *.jpg
+
+Pareil pour 600 : 
+
+    mogrify -path 600 -resize 600x "600x>" *.jpg
+
+mogrify -path 1280 -resize 1280x "1280x>" *.jpg
+
+convert -path 1920 -resize 1920x1920\> *.jpg:

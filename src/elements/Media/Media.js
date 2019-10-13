@@ -7,24 +7,15 @@ import './Media.scss';
 export class Media extends Component {
 
 
-    imageLoaded(e){
-        let parent = e.target.parentElement;
-
-        let loaderOverlay = parent.querySelector('.loader-overlay');
-        loaderOverlay.style.display = "none";
-
-        let placeholder = parent.querySelector('.placeholder');
-        placeholder.style.display="none";
-
-        let original = e.target;
-        original.style.display="block";
-
-    }
+    
 
     render() {
 
         let index = this.props.index;
         let media = this.props.media;
+
+        //On va voir...
+        //let versions = ['320','600','960','1280'];
 
         return (
             <div
@@ -34,22 +25,16 @@ export class Media extends Component {
                 }}
             >
                 {media.type === 'image' &&
-                    <>
-                        <div className="loader-overlay">
-                            <img src={loader} alt=""/>
-                        </div>
-                        <img 
-                            src={`/img/medias/placeholders/${media.src}`} 
-                            alt="" 
-                            className="placeholder" 
-                        />
-                        <img 
-                            src={`/img/medias/${media.src}`} 
-                            alt="" 
-                            className="original" 
-                            onLoad={(e)=>this.imageLoaded(e)}
-                        />
-                    </>
+                                            
+                    <img 
+                        srcSet={media.versions.map((w) => (
+                            '/img/medias/' + w + '/' + media.src + ' ' + w + 'w'
+                        ))} 
+                        src={`/img/medias/${media.src}`} 
+                        alt="" 
+                        className="original" 
+                    />
+                    
                 }
                 {media.type === 'video' &&
                     <div className="video">

@@ -23,7 +23,13 @@ export class Projects extends Component {
                                 
 
                                 {item.cover.type=="image" &&
-                                    <img src={`/img/projects/${item.cover.src}`} alt=""/>
+                                    <img 
+                                        srcSet={item.cover.versions.map((w) => (
+                                        '/img/projects/'+ w + '/' + item.cover.src+' '+w+'w'
+                                        ))}    
+                                        src={`/img/projects/${item.cover.src}`} 
+                                        alt=""
+                                    />
                                 }
                                 {item.cover.type == "videogif" &&
                                     <video

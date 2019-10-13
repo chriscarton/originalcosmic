@@ -24,7 +24,7 @@ export class Homepage extends Component {
     render() {
         return (
             <div className="page" id="Homepage">
-                <Home/>
+                {/* <Home/> */}
                 <Projects/>
             </div>
         )
