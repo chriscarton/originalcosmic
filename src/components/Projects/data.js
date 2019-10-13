@@ -37,7 +37,7 @@ let data = [
             {
                 type:'image',
                 src:"DSRTRFONNW.jpg",
-                versions:['320']
+                versions:['320','600','960','1280']
             },
             {
                 type:'image',

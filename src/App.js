@@ -12,6 +12,7 @@ import Tests from './components/Tests/Tests.js';
 //Import des pages (c'est quand même le plus important)
 import Homepage from './pages/Homepage/Homepage.js';
 import Studiocontact from './pages/Studiocontact/Studiocontact.js';
+import Showreel from './pages/Showreel/Showreel.js';
 
 //Import du composant allProjects (qui n'est pas vraiment une page...)
 import AllProjects from './components/AllProjects/AllProjects.js';
@@ -52,6 +53,7 @@ export class App extends Component {
                     <Switch location={location}>
                       <Route path="/" exact component={Homepage}/>
                       <Route path="/studio" exact component={Studiocontact} />
+                      <Route path="/showreel" exact component={Showreel} />
                       <Route path="/projets" exact component={AllProjects} />
                       <Route path="/projet/:slug" exact component={SingleProject} />
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './Projects.scss';
 import data from './data.js';
 import { Link } from 'react-router-dom';
-import AllProjects from '../AllProjects/AllProjects.js';
 
 export class Projects extends Component {
 
@@ -20,8 +19,6 @@ export class Projects extends Component {
                     {this.state.projects.map((item)=>(
                         <div className={`item ${item.slug}`} key={item.id}>
                             <Link to={`projet/${item.slug}`}>
-                                
-
                                 {item.cover.type=="image" &&
                                     <img 
                                         srcSet={item.cover.versions.map((w) => (
@@ -48,11 +45,6 @@ export class Projects extends Component {
                             </Link>
                         </div>
                     ))}
-                </div>
-                <div className="all-projects">
-                    <Link to="/projets">
-                        Tous nos projets
-                    </Link>
                 </div>
             </div>
         )

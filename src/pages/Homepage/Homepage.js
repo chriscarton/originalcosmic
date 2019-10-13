@@ -13,14 +13,15 @@ export class Homepage extends Component {
     
 
     componentDidMount(){
-        this.bigHeader();
+        //this.bigHeader();
     }
 
+    /*
     bigHeader() {
         let header = document.querySelector('#Header');
         header.classList.remove('small-header')
     }
-
+    */
     render() {
         return (
             <div className="page" id="Homepage">

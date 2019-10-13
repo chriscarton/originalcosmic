@@ -1,3 +1,7 @@
+/* 
+    Ce composant était une idée pour afficher la suite des projets mais n'est pas utilisé à ce jour. 
+*/
+
 import React, { Component } from 'react';
 import './AllProjects.scss';
 import data from '../Projects/data.js';
