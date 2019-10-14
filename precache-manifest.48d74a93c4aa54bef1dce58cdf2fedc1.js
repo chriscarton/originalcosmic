@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b4ea37bf5f2a8a98279f16bb20ef664",
+    "revision": "4c9a6768aeb6286090684ff6a7080677",
     "url": "/originalcosmic/index.html"
   },
   {
