@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/originalcosmic/static/css/main.62933c78.chunk.css",
+    "main.js": "/originalcosmic/static/js/main.97097cb5.chunk.js",
+    "main.js.map": "/originalcosmic/static/js/main.97097cb5.chunk.js.map",
+    "runtime-main.js": "/originalcosmic/static/js/runtime-main.ff19b548.js",
+    "runtime-main.js.map": "/originalcosmic/static/js/runtime-main.ff19b548.js.map",
+    "static/js/2.2806121d.chunk.js": "/originalcosmic/static/js/2.2806121d.chunk.js",
+    "static/js/2.2806121d.chunk.js.map": "/originalcosmic/static/js/2.2806121d.chunk.js.map",
+    "index.html": "/originalcosmic/index.html",
+    "precache-manifest.756d50d1e4e60c2953be78b735c0ea99.js": "/originalcosmic/precache-manifest.756d50d1e4e60c2953be78b735c0ea99.js",
+    "service-worker.js": "/originalcosmic/service-worker.js",
+    "static/css/main.62933c78.chunk.css.map": "/originalcosmic/static/css/main.62933c78.chunk.css.map",
+    "static/media/font-awesome.min.css": "/originalcosmic/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/loader.gif": "/originalcosmic/static/media/loader.76ad19ce.gif"
+  }
+}
