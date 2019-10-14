@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
 import loader from '../../assets/img/loader.gif';
+import Plyr from 'plyr';
 
 import './Media.scss';
 
 export class Media extends Component {
 
 
-    
+    componentDidMount(){
+        const player = new Plyr('#player');
+    }
 
     render() {
 
@@ -38,7 +41,7 @@ export class Media extends Component {
                 }
                 {media.type === 'video' &&
                     <div className="video">
-                        {media.src}
+                        
                     </div>
                 }
                 {media.type === 'videogif' &&
@@ -60,7 +63,10 @@ export class Media extends Component {
                     </div>
                 }
                 {media.type === 'iframe' &&
-                    <div className="iframe-container">
+                    // <div className="iframe-container">
+                    //     {parse(media.src)}
+                    // </div>
+                    <div class="plyr__video-embed" id="player">
                         {parse(media.src)}
                     </div>
                 }

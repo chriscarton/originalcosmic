@@ -41,7 +41,6 @@
     }
 
     #projectGrid.grid{
-        min-height:100vh;
         display:grid;
         background-color: silver;
         grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
@@ -129,4 +128,12 @@
     }
 
     @import 'grids.scss';
+}
+
+@media screen and (min-width:600px){
+    #singleProject{
+        #projectGrid.grid{
+            min-height: 100vh;
+        }
+    }
 }

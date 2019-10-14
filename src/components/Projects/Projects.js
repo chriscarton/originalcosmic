@@ -28,11 +28,12 @@ export class Projects extends Component {
                                         alt=""
                                     />
                                 }
-                                {item.cover.type == "videogif" &&
+                                {item.cover.type==="videogif" &&
                                     <video
                                         className="videogif"
                                         autoPlay
                                         loop
+                                        muted
                                     >
                                         <source
                                             src={'/img/projects/' + item.cover.src}
@@ -41,7 +42,6 @@ export class Projects extends Component {
                                         Votre navigateur ne supporte pas la vidéo.
                                     </video>
                                 }
-
                             </Link>
                         </div>
                     ))}

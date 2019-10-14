@@ -40,8 +40,10 @@ export class App extends Component {
 
 
   render(){
+    //J'ai enlevé ceci dans l'espoir que ça marche sur github pages
+    //basename={process.env.PUBLIC_URL}
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div className="App">
           <Header/>
           <Route
